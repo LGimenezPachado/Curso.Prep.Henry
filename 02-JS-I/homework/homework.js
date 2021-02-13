@@ -18,7 +18,7 @@ const nuevaResta = 10 - 5 === 5;
 
 // Resuelve el siguiente problema matemático:
 //const nuevaMultiplicacion = 10 * null === 40 ;
-const nuevaMultipliacion = 10 * 4 === 40;
+const nuevaMultiplicacion = 10 * 4 === 40;
 
 // Resuelve el siguiente problema matemático:
 //const nuevoModulo = 21 % 5 === null;
@@ -93,10 +93,8 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  var larg1 = length (str1);
-  var larg2 = length (str2);
-
-  if (larg1 == larg2) {
+  
+  if (str1.length == str2.length) {
     return true;
   } else false;
 }
@@ -191,8 +189,8 @@ function redondearHaciaArriba(num) {
   // Redondea "num" hacia arriba (al próximo entero) y devuélvelo
   // Tu código:
 
-  var redondedoarriba = Math.ceil(num);
-  return redondeoarriba;
+  var redondeoArriba = Math.ceil(num);
+  return redondeoArriba;
 }
 
 function agregarSimboloExclamacion(str) {
@@ -209,7 +207,7 @@ function combinarNombres(nombre, apellido) {
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
 
-  var completo = nombre + apellido;
+  var completo = nombre + ',' + apellido;
   return completo;
 
 }

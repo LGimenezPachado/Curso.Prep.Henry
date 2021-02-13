@@ -36,7 +36,7 @@ function invocarMetodo(objeto, metodo) {
   // Nada necesita ser devuelto ("returned")
   // Tu código:
 
-  objeto[metodo] ();
+  objeto[metodo]();
 
 
 
@@ -57,8 +57,7 @@ function eliminarPropiedad(objeto, propiedad) {
   // Devuelve el objeto
   // Tu código:
 
-  delete objeto[propiedad]
-
+  objeto[propiedad] = undefined;
   return objeto;
 
 
@@ -70,9 +69,9 @@ function nuevoUsuario(nombre, email, password) {
   // Tu código:
 
   var usuario = {
-    nombreUsuario = nombre,
-    emailUsuario = email,
-    passwordUsuario = password
+    nombreUsuario: nombre,
+    emailUsuario: email,
+    passwordUsuario: password
   }
 
   return usuario;
@@ -97,7 +96,7 @@ function tienePropiedad(objeto, propiedad) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  if (objeto[propiedad]) { 
+  if (objeto[propiedad]) {
     return true;
   } else return false;
 
@@ -110,7 +109,7 @@ function verificarPassword(usuario, password) {
   // De lo contrario, devuelve "false"
   // // Tu código:
 
-  if (password == usuario.password){
+  if (password == usuario.password) {
     return true;
   } else return false;
 }
@@ -123,8 +122,6 @@ function actualizarPassword(usuario, nuevaPassword) {
   usuario['password'] = nuevaPassword;
   return usuario;
 
-
-  
 }
 
 function agregarAmigo(usuario, nuevoAmigo) {
@@ -132,61 +129,86 @@ function agregarAmigo(usuario, nuevoAmigo) {
   // Agrega "nuevoAmigo" al final de ese array
   // Devuelve el objeto "usuario"
   // // Tu código:
-{
-  usuario.amigos.push(nuevoAmigo);
-  
-  return usuario;
+  {
+    usuario.amigos.push(nuevoAmigo);
 
+    return usuario;
+
+  }
+
+  function pasarUsuarioAPremium(usuarios) {
+    // "usuarios" es un array de objetos "usuario"
+    // Cada objeto "usuario" tiene la propiedad "esPremium"
+    // Define cada propiedad "esPremium" de cada objeto como "true"
+    // Devuelve el array de usuarios
+    // Tu código:
+
+    for (let i = 0; i < usuarios.length; i++) {
+      usuario[i].esPremium = true;
+    }
+
+    return usuarios;
+
+  }
+
+  function sumarLikesDeUsuario(usuario) {
+    // "usuario" tiene una propiedad llamada "posts" que es un array
+    // "posts" es un array de objetos "post"
+    // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
+    // Suma todos los likes de todos los objetos "post"
+    // Devuelve la suma
+    // Tu código:
+
+    var total;
+
+    for (let i = 0; i < usuario.posts.length; i++) {
+      total += usuario.posts[i].likes;
+    }
+
+
+    return total;
+  }
+
+  function agregarMetodoCalculoDescuento(producto) {
+    // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
+    // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") 
+    // con "porcentajeDeDescuento" para obtener el descuento
+    // El método resta el descuento del precio y devuelve el precio con descuento
+    // Devuelve el objeto "producto" al final de la función
+    // Ejemplo:
+    // producto.precio -> 20
+    // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
+    // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
+    // Tu código:
+
+    new calcularPrecioDescuento;
+
+    producto.calcularPrecioDescuento = function () {
+      var descuento = producto.precio * porcentajeDeDescuento;
+      var total = producto.precio - descuento;
+      return total;
+    }
+    return producto;
+
+  }
+
+  // No modificar nada debajo de esta línea
+  // --------------------------------
+
+  module.exports = {
+    crearGato,
+    agregarPropiedad,
+    invocarMetodo,
+    multiplicarNumeroDesconocidoPorCinco,
+    eliminarPropiedad,
+    nuevoUsuario,
+    tieneEmail,
+    tienePropiedad,
+    verificarPassword,
+    actualizarPassword,
+    agregarAmigo,
+    pasarUsuarioAPremium,
+    sumarLikesDeUsuario,
+    agregarMetodoCalculoDescuento
+  };
 }
-
-function pasarUsuarioAPremium(usuarios) {
-  // "usuarios" es un array de objetos "usuario"
-  // Cada objeto "usuario" tiene la propiedad "esPremium"
-  // Define cada propiedad "esPremium" de cada objeto como "true"
-  // Devuelve el array de usuarios
-  // Tu código:
-
-  
-}
-
-function sumarLikesDeUsuario(usuario) {
-  // "usuario" tiene una propiedad llamada "posts" que es un array
-  // "posts" es un array de objetos "post"
-  // Cada objeto "post" tiene una propiedad llamada "likes" que es un entero (int/integer)
-  // Suma todos los likes de todos los objetos "post"
-  // Devuelve la suma
-  // Tu código:
-}
-
-function agregarMetodoCalculoDescuento(producto) {
-  // Agregar un método (función) al objeto "producto" llamado "calcularPrecioDescuento"
-  // Este método debe multiplicar el "precio" del "producto" ("producto.precio" o "producto[precio]") y "porcentajeDeDescuento" para obtener el descuento
-  // El método resta el descuento del precio y devuelve el precio con descuento
-  // Devuelve el objeto "producto" al final de la función
-  // Ejemplo:
-  // producto.precio -> 20
-  // producto.porcentajeDeDescuento -> 0.2 (o simplemente ".2")
-  // producto.calcularPrecioDescuento() -> 20 - (20 * 0.2)
-  // Tu código:
-
-}
-
-// No modificar nada debajo de esta línea
-// --------------------------------
-
-module.exports = {
-  crearGato,
-  agregarPropiedad,
-  invocarMetodo,
-  multiplicarNumeroDesconocidoPorCinco,
-  eliminarPropiedad,
-  nuevoUsuario,
-  tieneEmail,
-  tienePropiedad,
-  verificarPassword,
-  actualizarPassword,
-  agregarAmigo,
-  pasarUsuarioAPremium,
-  sumarLikesDeUsuario,
-  agregarMetodoCalculoDescuento
-};
