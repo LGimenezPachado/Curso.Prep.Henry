@@ -25,11 +25,13 @@ function saludo(idioma) {
   // Si "idioma" no es ninguno de los anteiores o es `undefined` devuelve "Hola!"
   // Tu código:
 
-  if (idioma == aleman) {
+  var aleman, mandarin, ingles;
+
+  if (idioma == "aleman") {
     return "Guten Tag!";
-  } else if (idioma == mandarin) {
-    return "Ni hao!";
-  } else if (idioma == ingles) {
+  } else if (idioma == "mandarin") {
+    return "Ni Hao!";
+  } else if (idioma == "ingles") {
     return "Hello!";
   } else {
     return "Hola!";
@@ -68,9 +70,13 @@ function esEntero(numero) {
 
   var redondeo = Math.floor(numero);
 
-  if (numero = redondeo) {
+
+  if (numero == redondeo) {
     return true;
-  } else return false;
+  } else {
+    return false
+  };
+
 
 }
 
@@ -80,12 +86,14 @@ function fizzBuzz(numero) {
   // Si "numero" es divisible entre 3 y 5 (ambos), devuelve "fizzbuzz"
   // De lo contrario, devuelve el numero
 
-  if (numero % 3 == 0) {
-    return fizz;
-  } else if (numero % 5 == 0) {
-    return buzz;
-  } else if (numero % 3 == 0 && numero % 5 == 0) {
-    return fizzBuzz;
+  if ((numero % 3) == 0) {
+    return 'fizz';
+  } else if ((numero % 5) == 0) {
+    return 'buzz';
+  } else if ((numero % 3 == 0) && (numero % 5 == 0)) {
+    return 'fizzbuzz';
+  } else {
+    return numero;
   }
 }
 
@@ -104,7 +112,7 @@ function esPrimo(numero) {
     }
   }
   return true;
-  
+
 }
 
 

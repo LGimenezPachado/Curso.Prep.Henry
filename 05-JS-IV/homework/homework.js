@@ -8,9 +8,9 @@ function crearGato(nombre, edad) {
   // Tu código:
 
   const gato = {
-    nombreGato: nombre,
-    edadGato: edad,
-    meow = function () {
+    nombre: nombre,
+    edad: edad,
+    meow : function () {
       return "Meow!"
     }
   };

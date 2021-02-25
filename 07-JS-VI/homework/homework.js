@@ -11,7 +11,7 @@ function sumarArray(numeros, cb) {
   // Pasa el resultado a `cb`
   // No es necesario devolver nada
 
-  var suma;
+  var suma = 0;
 
   for (let i = 0; i < numeros.length; i++) {
     suma += numeros[i];
@@ -41,7 +41,7 @@ function map(array, cb) {
     cb(array[i]);
     newArray.push(cb(array[i]));
   }
-
+  return newArray;
 }
 
 // No modificar nada debajo de esta línea

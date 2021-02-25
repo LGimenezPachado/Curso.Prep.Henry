@@ -61,7 +61,7 @@ function multiplica(x, y) {
   // Multiplica "x" por "y" y devuelve el valor
   // Tu código:
 
-  var res3 = x*y;
+  var res3 = x * y;
 
   return res3;
 }
@@ -70,7 +70,7 @@ function divide(x, y) {
   // Divide "x" entre "y" y devuelve el valor
   // Tu código:
 
-  var res4 = x/y;
+  var res4 = x / y;
 
   return res4;
 }
@@ -93,10 +93,12 @@ function tienenMismaLongitud(str1, str2) {
   // De lo contrario, devuelve "false"
   // Tu código:
 
-  
-  if (str1.length == str2.length) {
+
+  if (str1.length === str2.length) {
     return true;
-  } else false;
+  } else {
+    return false
+  };
 }
 
 function menosQueNoventa(num) {
@@ -124,7 +126,7 @@ function obtenerResto(x, y) {
   // Obten el resto de la división de "x" entre "y"
   // Tu código:
 
-  var resto  = x%y;
+  var resto = x % y;
 
   return resto;
 }
@@ -162,8 +164,8 @@ function elevarAlCuadrado(num) {
 function elevarAlCubo(num) {
   // Devuelve el valor de "num" elevado al cubo
   // Tu código:
-  
-  var cubo = Math.pow (num,3)
+
+  var cubo = Math.pow(num, 3)
 
   return cubo;
 }
@@ -172,7 +174,7 @@ function elevar(num, exponent) {
   // Devuelve el valor de "num" elevado al exponente dado en "exponent"
   // Tu código:
 
-  var exponente = Math.pow (num, exponent);
+  var exponente = Math.pow(num, exponent);
 
   return exponente
 }
@@ -207,7 +209,7 @@ function combinarNombres(nombre, apellido) {
   // Ejemplo: "Soy", "Henry" -> "Soy Henry"
   // Tu código:
 
-  var completo = nombre + ',' + apellido;
+  var completo = nombre + ' ' + apellido;
   return completo;
 
 }
@@ -226,7 +228,7 @@ function obtenerAreaRectangulo(alto, ancho) {
   // Retornar el area de un rectángulo teniendo su altura y ancho
   // Tu código:
 
-  var area = alto*ancho;
+  var area = alto * ancho;
   return area;
 
 }
